@@ -1,0 +1,75 @@
+
+
+
+*,
+*::before,
+*::after{
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box ;
+      margin: 0;
+      padding: 0;
+}
+body {
+      background-image: url('https://images.hdqwalls.com/download/morning-coffee-mug-on-table-4k-tf-2560x1440.jpg');
+      background-repeat: no-repeat;
+      background-position: 10%;
+      background-size: cover;
+      height: 100vh;
+      width: 100vw;
+      padding: 50px;
+      font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+      color: #ffffff;
+      text-decoration: none;
+}
+
+h1 {
+      color: #ffffff;
+}
+h2{
+      font-family: 'Shadows Into Light', cursive;
+      color: blanchedalmond;
+      font-size: 55px;
+}
+
+form{
+      font-family: 'Shadows Into Light', cursive;
+      color: burlywood;
+}
+
+input[type=text] {
+      width: 200px;
+      margin: 8px 8px;
+      box-sizing: border-box;
+}
+
+.form-div{
+      position: absolute;
+      padding: 20px 20px;
+      background: beige;
+      border-radius: 10px;
+}
+
+.nav-wrapper{
+      font-family: 'Abril Fatface', cursive;
+      display: flex;
+      max-height: 200px;
+      height: 40px;
+      padding: 25px;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #020202;
+}
+
+
+.right{
+      list-style-type: none;
+      margin:0;
+      padding: 0;
+}
+
+.brand-logo {
+      margin-left: 15px;
+}

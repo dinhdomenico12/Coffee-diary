@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+      <head>
+      <title>Coffee Diary</title>
+      <link rel='stylesheet' href='/stylesheets/style.css' />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+      </head>
+      <body>
+      <div class="navbar-fixed">
+            <nav>
+                  <div class="nav-wrapper">
+                        <h1 class="brand-logo">Coffee Diary</h1>
+                        <!-- Add login UI here -->
+                        <ul class="right">
+                              <li>
+                              <% if (user) { %>
+                                    <a href="/logout"><i class="material-icons left"></i>Log Out</a>
+                                    <% } else { %>
+                                    <a href="/auth/google"><i class="material-icons left"></i>Login with Google</a>
+                              <% } %>
+                              </li>
+                        </ul>
+                  </div>
+            </nav>
+      </div>
+            <div class="form-div">
+                  <br><br><h2>Diary Entry</h2>
+                        <form class="inputbox" action="/coffee" method="POST">
+                        <label>Bean:
+                              <input class="inputbox" type="text" name="bean" required>
+                        </label><br>
+                        <label>Roast:
+                              <input class="inputbox" type="text" name="roast" required>
+                        </label><br>
+                        <label>Region:
+                        <input class="inputbox" type="text" name="region" required>
+                        </label><br>
+                        <label>Ratio:
+                              <input class="inputbox" type="text" name="ratio" required>
+                        </label><br>
+                        <label>Grind:
+                              <input class="inputbox" type="text" name="grind" required>
+                        </label><br>
+                        <label>Weight:
+                              <input class="inputbox" type="number" name="weight" required>
+                        </label><br>
+                        <label>Water:
+                              <input class="inputbox" type="Number" name="water" required>
+                        </label><br>
+                        <textarea name="review" cols="30" rows="10" ></textarea>
+                              <input type="submit" value="Add details">
+                  </form>
+                  <a href="/coffee/entries"><button>Diary Entries</button></a>
+            </div>
+      </body>
+</html>

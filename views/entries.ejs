@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Diary Entries</title>
+</head>
+<body>
+      <h1>Diary Entries</h1>
+      <table>
+            <thead>
+      <tr>
+            <th>Author</th>
+            <th>Bean</th>
+            <th>Roast</th>
+            <th>Region</th>
+            <th>Ratio</th>
+            <th>Grind</th>
+            <th>Weight</th>
+            <th>Water</th>
+            <th>Reviews</th>
+      </tr>
+      </thead>
+      <tbody>
+            <% for (let j=0; j < 2; j++) { %>
+                  <%for (let i = 0; i < dshow[j].diaryEntries.length; i++){ %>
+                        <tr>
+                        <td><%= dshow[j].name %></td>
+                        <td><%= dshow[j].diaryEntries[i].Bean %></td>
+                        <td><%= dshow[j].diaryEntries[i].Roast%></td>
+                        <td><%= dshow[j].diaryEntries[i].Region %></td>
+                        <td><%= dshow[j].diaryEntries[i].Ratio %></td>
+                        <td><%= dshow[j].diaryEntries[i].Grind %></td>
+                        <td><%= dshow[j].diaryEntries[i].Weight %></td>
+                        <td><%= dshow[j].diaryEntries[i].Water %></td>
+                        <td><a href="/coffee/entries/<%= dshow[j].diaryEntries[i]._id %>/">Details</a></td>
+                        <% if (user) { %>
+                              <td><form class="deleteEntry" action="/coffee/entries/<%= dshow[j].diaryEntries[i]._id %>?_method=DELETE" method="POST">
+                                          <button type="submit">Delete</button>
+                              </form></td>
+                        <% } %>
+                        </tr>
+                        </tr>
+                  <% } %>
+            <% } %>
+      </tbody>
+      </table>
+</body>
+</html>
